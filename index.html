@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freefit</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" sizes="16x16" href="images/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="150x150" href="images/favicon/mstile-150x150.png">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-item">
+        <a href="#" class="header-logo"></a>
+        <div class="header-burger">
+          <button class="burger" onclick="openModal()"></button>
+        </div>
+        <nav>
+          <ul class="header-nav">
+            <li><a class="active" href="#">Мероприятия</a></li>
+            <li><a href="#">Расписание</a></li>
+            <li><a href="#">О компании</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <ul class="social-icons">
+            <li>
+              <a class="social-icons-instagram" href="#" target="_blank"><span
+                  class="social-icons-hidden">Instagram</span></a>
+            </li>
+            <li>
+              <a class="social-icons-facebook" href="#" target="_blank"><span
+                  class="social-icons-hidden">Facebook</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="bg">
+    <div class="container">
+      <div class="banner">
+        <h1 class="banner-title">
+          <span>&gt;&nbsp;15 тренировок</span>
+          онлайн тренировки любой&nbsp;сложности
+        </h1>
+        <div class="banner-box">
+          <p class="banner-text">
+            в области спортивной физиологии&nbsp;и&nbsp;нутрициологии
+          </p>
+          <a class="banner-link" href="#">узнать подробнее</a>
+        </div>
+      </div>
+      <div class="visual"></div>
+      <div class="visual-img"></div>
+      <a href="#eventBottom" class="button-down"></a>
+    </div>
+  </div>
+  <main>
+    <section class="event">
+      <div class="container">
+        <h2 class="event-title">Ближайшие события</h2>
+        <div class="event-cards">
+          <div class="event-item">
+            <div class="event-content">
+              <p class="event-name">Марафон выносливости</p>
+              <span class="event-date">29.06 - 4.07</span>
+            </div>
+            <span class="event-hashtag">марафон</span>
+            <button type="button" class="event-btn">Записаться</button>
+          </div>
+          <div class="event-item">
+            <div class="event-content">
+              <p class="event-name">Как стать тренером?</p>
+              <span class="event-date">9.07</span>
+            </div>
+            <span class="event-hashtag">вебинар</span>
+            <button type="button" class="event-btn">Записаться</button>
+          </div>
+          <div class="event-item">
+            <div class="event-content">
+              <p class="event-name">Йога, как стиль жизни</p>
+              <span class="event-date">15.07</span>
+            </div>
+            <span class="event-hashtag">вебинар</span>
+            <button type="button" class="event-btn">Записаться</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="schedule">
+      <div class="container">
+        <div class="schedule-heading">
+          <h2 class="schedule-title">Расписание тренировок</h2>
+          <p class="schedule-date">22 - 28 июня</p>
+        </div>
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <span class="schedule-time">22 июня, 10:00</span>
+            <div class="schedule-content">
+              <p class="schedule-name">Функциональный тренинг</p>
+              <div class="schedule-img">
+                <img src="/images/icons/body.svg" alt="training icon">
+              </div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">24 июня, 10:00</span>
+            <div class="schedule-content">
+              <p class="schedule-name">Body sculpt</p>
+              <div class="schedule-img">
+                <img src="/images/icons/bottle.svg" alt="body sculpt icon">
+              </div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">26 июня, 11:00</span>
+            <div class="schedule-content">
+              <p class="schedule-name">L.A.B.</p>
+              <div class="schedule-img">
+                <img src="/images/icons/dumbbell.svg" alt="lab dumbbell icon">
+              </div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">23 июня, 10:00</span>
+            <div class="schedule-content">
+              <p class="schedule-name">Силовой микс</p>
+              <div class="schedule-img">
+                <img src="/images/icons/jump.svg" alt="power mix icon">
+              </div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">25 июня, 11:00</span>
+            <div class="schedule-content">
+              <p class="schedule-name">Дыхательные практики</p>
+              <div class="schedule-img">
+                <img src="/images/icons/heart.svg" alt="breathing practices icon">
+              </div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">27 июня, 10:00</span>
+            <div class="schedule-content">
+              <p class="schedule-name">Комплексная разминка</p>
+              <div class="schedule-img">
+                <img src="/images/icons/weight.svg" alt="complex warm-up icon">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe">
+      <div class="container">
+        <form action="#" method="post">
+          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+          <div class="subscribe-form">
+            <div class="subscribe-agreement">
+              <input class="subscribe-input" type="email" placeholder="Ваш e-mail" name="mail">
+              <div class="agreement">
+                <input type="checkbox" id="01" class="checkbox">
+                <label for="01">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
+              </div>
+            </div>
+            <button class="subscribe-btn" type="submit">подписаться</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="about-company">
+      <div class="container">
+        <div class="about-company-content">
+          <div class="about-company-description">
+            <h2 class="about-company-title">О компании</h2>
+            <p class="about-company-text">Наша компания является одной из немногих, кто предлагает фитнес-услуги онлайн!
+              Оставайтесь с&nbsp;нами и вы сами увидите, что мы проводим не&nbsp;только онлайн-тренировки.</p>
+            <button class="about-company-btn" type="submit">Записаться</button>
+          </div>
+          <div class="about-company-img"></div>
+        </div>
+        <div class="about-company-advantages">
+          <ul class="advantages-list">
+            <li class="advantages-items">
+              <h3 class="advantages-items-title">Экономия времени </h3>
+              <p class="advantages-items-text">Не нужно тратить&nbsp;время на дорогу</p>
+            </li>
+            <li class="advantages-items">
+              <h3 class="advantages-items-title">Индивидуальный подход</h3>
+              <p class="advantages-items-text">Внимание тренера принадлежит&nbsp;только вам</p>
+            </li>
+            <li class="advantages-items">
+              <h3 class="advantages-items-title">Экономия денег</h3>
+              <p class="advantages-items-text">Средняя цена одной тренировки - 700₽</p>
+            </li>
+            <li class="advantages-items">
+              <h3 class="advantages-items-title">Опытный персонал</h3>
+              <p class="advantages-items-text">Стаж работы у наших тренеров от 5 лет</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-navigation">
+        <a href="#" class="footer-logo"></a>
+        <ul class="footer-nav">
+          <li><a href="#">Мероприятия</a></li>
+          <li><a href="#">Расписание</a></li>
+          <li><a href="#">О компании</a></li>
+        </ul>
+        <div class="footer-social">
+          <a class="footer-email " href="mailto:info@freefit.com">info@freefit.com</a>
+          <ul class="footer-icons">
+            <li>
+              <a class="social-icons-instagram" href="#" target="_blank"><span
+                  class="social-icons-hidden">Instagram</span></a>
+            </li>
+            <li>
+              <a class="social-icons-facebook" href="#" target="_blank"><span
+                  class="social-icons-hidden">Facebook</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p class="copyright-text">&copy; 2022, Все права защищены</p>
+        <p class="copyright-text">Сделано в рамках курса учебной платформы <a href="#" target="_blank">Annblok</a></p>
+      </div>
+    </div>
+  </footer>
+  <div class="modal" id="modal">
+    <a href="#" class="header-logo"></a>
+    <ul class="header-nav">
+      <li><a href="#">Мероприятия</a></li>
+      <li><a href="#">Расписание</a></li>
+      <li><a href="#">О компании</a></li>
+    </ul>
+    <div class="social">
+      <ul class="social-icons">
+        <li>
+          <a class="social-icons-instagram" href="#" target="_blank"><span
+              class="social-icons-hidden">Instagram</span></a>
+        </li>
+        <li>
+          <a class="social-icons-facebook" href="#" target="_blank"><span
+              class="social-icons-hidden">Facebook</span></a>
+        </li>
+      </ul>
+    </div>
+    <button class="burger-close" onclick="closeModal()"></button>
+  </div>
+  <script>
+    function openModal() {
+      document.getElementById("modal").style.top = "0px";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.top = "-400px";
+    }
+  </script>
+</body>
+
+</html>
