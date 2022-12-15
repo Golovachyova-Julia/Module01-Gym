@@ -53,7 +53,7 @@ body {
   background: transparent;
 }
 
-.header-nav a.active::after {
+.header-nav a:hover::after {
   background: #2b3541;
 }
 
@@ -159,39 +159,19 @@ body {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.03em;
-}
-
-.button-up.visible {
-  opacity: 1;
-}
-
-.button-up:hover {
-  background-color: #f37335;
-  cursor: pointer;
-}
-
-.button-up {
-  background-color: #fbb731;
-  font-size: 14px;
-  font-weight: 700;
-  color: #1e2f40;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 5px 20px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
   transition: 0.3s;
 }
+
 
 .visual {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   position: relative;
-  background: 
-  linear-gradient(90deg,
+  background:
+    linear-gradient(90deg,
       rgba(251, 241, 56, 0.2),
       rgba(253, 249, 182, 0.45) 145.23%);
   width: 464px;
@@ -250,16 +230,12 @@ body {
   height: 600px;
   position: absolute;
   top: 0;
+  transition: 0.3s;
 }
 
 .event-item:hover::after {
   content: "";
   background: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%);
-  width: 367px;
-  height: 600px;
-  position: absolute;
-  top: 0;
-  transition: 0.3s;
 }
 
 .event-item:nth-child(1) {
@@ -285,12 +261,11 @@ body {
   flex-direction: column-reverse;
   padding-left: 30px;
   padding-top: 30px;
-  z-index: 2;
 }
 
 .event-btn {
   background: rgba(43, 53, 65, 1);
-  box-shadow: 0px 13px 24px 0px #46566A47;
+  box-shadow: 0px 13px 24px 0px rgba(70, 86, 106, 0.2);
   color: #fbf138;
   padding: 20px 60px;
   display: inline-block;
@@ -302,14 +277,14 @@ body {
   top: 185px;
   opacity: 0;
   align-items: center;
-  border: none;
+  border: 1px solid transparent;
+  transition: 0.1s;
   cursor: pointer;
 }
 
 .event-item:hover .event-btn {
   opacity: 1;
-  z-index: 5;
-  transition: 0.3s;
+  z-index: 1;
 }
 
 .event-name {
@@ -317,14 +292,12 @@ body {
   font-size: 28px;
   line-height: 35px;
   margin-top: 20px;
-  z-index: 2;
 }
 
 .event-date {
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-  z-index: 2;
 }
 
 .event-hashtag {
@@ -409,16 +382,15 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: 0.1s;
+  cursor: pointer;
 }
 
 .schedule-item:hover {
   border: 1px solid transparent;
   background: linear-gradient(180deg, rgba(251, 241, 56, 0.7), rgba(253, 249, 182, 0.45) 100%);
-   box-shadow: 0px 13px 30px 0px rgba(186, 180, 69, 0.2);
-  transition: 0.3s;
-  cursor: pointer;
+  box-shadow: 0px 13px 30px 0px rgba(186, 180, 69, 0.2);
 }
-
 
 .schedule-name {
   font-size: 18px;
@@ -443,10 +415,10 @@ body {
 }
 
 .subscribe {
-background-color: rgba(243, 243, 243, 1);
-padding-top: 81px;
-padding-bottom: 82px;
-margin-bottom: 160px;
+  background-color: rgba(243, 243, 243, 1);
+  padding-top: 81px;
+  padding-bottom: 82px;
+  margin-bottom: 160px;
 }
 
 .subscribe>.container {
@@ -454,19 +426,19 @@ margin-bottom: 160px;
 }
 
 .subscribe-form {
-display: flex;
-margin-left: 269px;
-gap: 0 21px;
+  display: flex;
+  margin-left: 269px;
+  gap: 0 21px;
 }
 
 .subscribe-title {
-font-size: 40px;
-font-weight: 700;
-line-height: 49px;
-margin: 0;
-margin-bottom: 40px;
-position: relative;
-    z-index: 1;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 49px;
+  margin: 0;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .subscribe-title::before {
@@ -478,8 +450,8 @@ position: relative;
   border-radius: 24px;
   position: absolute;
   left: 242px;
-    bottom: 14px;
-    z-index: -1;
+  bottom: 14px;
+  z-index: -1;
 }
 
 .subscribe-input {
@@ -514,7 +486,6 @@ position: relative;
 
 .subscribe-btn {
   background-color: #FBF138;
-  border: 1px solid rgba(251, 241, 56, 0.2);
   box-shadow: 0px 13px 24px 0px rgb(251 241 56 / 20%);
   padding: 19px 42px;
   color: rgba(43, 53, 65, 1);
@@ -524,6 +495,9 @@ position: relative;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  transition: 0.3s;
 }
 
 .agreement {
@@ -535,72 +509,72 @@ position: relative;
 }
 
 .checkbox:checked,
-.checkbox:not(:checked){
-   position: absolute;
-   left:-9999px;
+.checkbox:not(:checked) {
+  position: absolute;
+  left: -9999px;
 }
 
-.checkbox:checked + label,
-.checkbox:not(:checked) + label{
-   position: relative;
-   padding-left: 25px;
-   cursor:pointer;
+.checkbox:checked+label,
+.checkbox:not(:checked)+label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
 }
 
-.checkbox:checked + label::before{
-   content:'';
-   position: absolute;
-   width: 14px;
-   height: 14px;
-   left:0;
-   top:calc(50% - 10px);
-   background-color: #2B3541;
-   border: 2px solid #2B3541;
+.checkbox:checked+label::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: calc(50% - 10px);
+  background-color: #2B3541;
+  border: 2px solid #2B3541;
 }
 
-.checkbox:checked + label::after{
-   content:'';
-   position: absolute;
-   width: 16px;
-   height: 12px;
-   transition: all .2s ease;
-   opacity: 1;
-   left: 2px;
-   top: calc(50% - 7px);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-image: url(../images/icons/checkbox.svg);
+.checkbox:checked+label::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  transition: all .2s ease;
+  opacity: 1;
+  left: 2px;
+  top: calc(50% - 7px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/icons/checkbox.svg);
 }
 
-.checkbox:not(:checked) + label::before{
-   content:'';
-   position: absolute;
-   width: 14px;
-   height: 14px;
-   left:0;
-   top:calc(50% - 10px);
-   background-color: transparent;
-   border: 2px solid #2B3541;
+.checkbox:not(:checked)+label::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: calc(50% - 10px);
+  background-color: transparent;
+  border: 2px solid #2B3541;
 }
 
-.checkbox:not(:checked) + label::after{
-   content:'';
-   position: absolute;
-   width: 16px;
-   height: 12px;
-   transition: all .2s ease;
-   opacity: 0;
-   left: 2px;
-   top: calc(50% - 7px);
-   background-position: 0 -12px;
-   background-color: transparent;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-image: url(../images/icons/check_box_empty.svg)
+.checkbox:not(:checked)+label::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  transition: all .2s ease;
+  opacity: 0;
+  left: 2px;
+  top: calc(50% - 7px);
+  background-position: 0 -12px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/icons/check_box_empty.svg)
 }
 
-.radio:checked + label::before{
-   border-radius: 100%;
+.radio:checked+label::before {
+  border-radius: 100%;
 }
 
 label>a {
@@ -612,7 +586,7 @@ label>a:hover {
 }
 
 .about-company {
-margin-bottom: 138px;
+  margin-bottom: 138px;
 }
 
 .about-company-content {
@@ -629,11 +603,11 @@ margin-bottom: 138px;
 }
 
 .about-company-img::after {
-content: "";
-background: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0.15) 100%);
-width: 581px;
-height: 336px;
-position: absolute;
+  content: "";
+  background: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0.15) 100%);
+  width: 581px;
+  height: 336px;
+  position: absolute;
 }
 
 .about-company-description {
@@ -648,7 +622,8 @@ position: absolute;
   margin-bottom: 21px;
 }
 
-.about-company-text, .advantages-items-text {
+.about-company-text,
+.advantages-items-text {
   font-size: 18px;
   line-height: 27px;
   padding-bottom: 15px;
@@ -658,12 +633,14 @@ position: absolute;
   background-color: rgba(251, 241, 56, 1);
   box-shadow: 0px 13px 24px 0px rgba(251, 241, 56, 0.3);
   padding: 20px 51px;
-  border: 1px solid rgba(251, 241, 56, 1);
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.03em;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  transition: 0.3s;
 }
 
 .advantages-list {
@@ -696,13 +673,12 @@ position: absolute;
   line-height: 22px;
 }
 
-.banner-link:hover, .subscribe-btn:hover, .about-company-btn:hover {
-background: rgba(43, 53, 65, 1);
-box-shadow: 0px 13px 24px 0px rgba(70, 86, 106, 0.2);
-color: #fbf138;
-border: none;
-transition: 0.3s;
-cursor: pointer;
+.banner-link:hover,
+.subscribe-btn:hover,
+.about-company-btn:hover {
+  background: rgba(43, 53, 65, 1);
+  box-shadow: 0px 13px 24px 0px rgba(70, 86, 106, 0.2);
+  color: #fbf138;
 }
 
 .footer {
@@ -736,12 +712,13 @@ cursor: pointer;
 .footer-nav>li>a {
   text-decoration: none;
   color: rgba(43, 53, 65, 1);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .footer-nav>li>a:hover {
-color: rgba(24, 31, 39, 1);
+  color: rgba(24, 31, 39, 1);
 }
-
 
 .footer-social {
   display: flex;
@@ -754,7 +731,7 @@ color: rgba(24, 31, 39, 1);
   display: block;
   margin-top: 13px;
   font-size: 16px;
-font-weight: 700;
+  font-weight: 700;
   line-height: 24px;
   color: rgba(43, 53, 65, 1);
   position: relative;
@@ -863,7 +840,7 @@ font-weight: 700;
 }
 
 .modal .social-icons>li {
-  margin-left: 16px; 
+  margin-left: 16px;
   margin-bottom: -10px;
 }
 
@@ -882,14 +859,17 @@ font-weight: 700;
   border: none;
   position: absolute;
   top: 34px;
-  right:5px;
+  right: 5px;
   cursor: pointer;
 }
 
 /*Responsive*/
 
 @media (-webkit-min-device-pixel-ratio: 2) {
-  .selector { background-image: url(../path_to_png/apple@2x.png); background-size: cover; }
+  .selector {
+    background-image: url(../path_to_png/apple@2x.png);
+    background-size: cover;
+  }
 }
 
 @media (min-width: 766px) {
