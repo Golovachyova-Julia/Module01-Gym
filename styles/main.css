@@ -63,11 +63,11 @@ body {
   padding-left: 0;
 }
 
-.social-icons>li {
+.social-icons > li {
   margin-left: 30px;
 }
 
-.social-icons>li>a {
+.social-icons > li > a {
   display: block;
   width: 30px;
   height: 30px;
@@ -77,7 +77,7 @@ body {
   text-decoration: none;
 }
 
-.social-icons>li>a:hover {
+.social-icons > li > a:hover {
   transform: scale(1.2);
   opacity: 1;
 }
@@ -98,7 +98,7 @@ body {
   opacity: 0;
 }
 
-.bg>.container {
+.bg > .container {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -120,17 +120,17 @@ body {
   flex-direction: column-reverse;
   font-size: 48px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 1.25;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
-.banner-title>span {
+.banner-title > span {
   display: block;
   font-size: 40px;
   font-weight: 400;
   text-transform: lowercase;
-  line-height: 50px;
+  line-height: 1.25;
   padding: 42px 0;
   margin-bottom: -53px;
   letter-spacing: 0.03em;
@@ -144,7 +144,7 @@ body {
 .banner-text {
   font-size: 18px;
   color: #2b3541;
-  line-height: 27px;
+  line-height: 1.5;
   margin-bottom: 35px;
 }
 
@@ -157,23 +157,23 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   box-sizing: border-box;
   border: 1px solid transparent;
   transition: 0.3s;
 }
 
-
 .visual {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   position: relative;
-  background:
-    linear-gradient(90deg,
-      rgba(251, 241, 56, 0.2),
-      rgba(253, 249, 182, 0.45) 145.23%);
+  background: linear-gradient(
+    90deg,
+    rgba(251, 241, 56, 0.2),
+    rgba(253, 249, 182, 0.25) 145.23%
+  );
   width: 464px;
   height: 850px;
   right: 2px;
@@ -181,7 +181,16 @@ body {
 
 .visual-img {
   background-image: url(../images/@1x/bg-girl.png);
+  background-image: -webkit-image-set(
+    url("../images/@2x/bg-girl-2x.png") 2x,
+    url("../images/@1x/bg-girl.png") 1x
+  );
+  background-image: image-set(
+    url("../images/@2x/bg-girl-2x.png") 2x,
+    url("../images/@1x/bg-girl.png") 1x
+  );
   background-repeat: no-repeat;
+  background-size: contain;
   width: 996px;
   height: 810px;
   position: absolute;
@@ -208,7 +217,7 @@ body {
   color: #2b3541;
   font-weight: 700;
   font-size: 40px;
-  line-height: 50px;
+  line-height: 1.25;
   margin-bottom: 40px;
 }
 
@@ -220,12 +229,19 @@ body {
 .event-item {
   width: 367px;
   height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
 
 .event-item::after {
   content: "";
-  background: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(251, 241, 56, 0.3) 0%,
+    rgba(253, 249, 182, 0) 70%
+  );
   width: 367px;
   height: 600px;
   position: absolute;
@@ -235,25 +251,47 @@ body {
 
 .event-item:hover::after {
   content: "";
-  background: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(251, 241, 56, 0.4) 0%,
+    rgba(253, 249, 182, 0) 100%
+  );
 }
 
 .event-item:nth-child(1) {
   background-image: url(../images/@1x/maraphon.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: -webkit-image-set(
+    url("../images/@2x/maraphon@2x.png") 2x,
+    url("../images/@1x/maraphon.png") 1x
+  );
+  background-image: image-set(
+    url("../images/@2x/maraphon@2x.png") 2x,
+    url("../images/@1x/maraphon.png") 1x
+  );
 }
 
 .event-item:nth-child(2) {
   background-image: url(../images/@1x/vebinar1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: -webkit-image-set(
+    url("../images/@2x/vebinar1-2x.png") 2x,
+    url("../images/@1x/vebinar1.png") 1x
+  );
+  background-image: image-set(
+    url("../images/@2x/vebinar1-2x.png") 2x,
+    url("../images/@1x/vebinar1.png") 1x
+  );
 }
 
 .event-item:nth-child(3) {
-  background-image: url(../images/@1x//vebinar2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(../images/@1x/vebinar2.png);
+  background-image: -webkit-image-set(
+    url("../images/@2x/vebinar2-2x.png") 2x,
+    url("../images/@1x/vebinar2.png") 1x
+  );
+  background-image: image-set(
+    url("../images/@2x/vebinar2-2x.png") 2x,
+    url("../images/@1x/vebinar2.png") 1x
+  );
 }
 
 .event-content {
@@ -271,7 +309,7 @@ body {
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
   position: absolute;
   left: 32px;
   top: 185px;
@@ -290,14 +328,15 @@ body {
 .event-name {
   font-weight: 700;
   font-size: 28px;
-  line-height: 35px;
+  line-height: 1.25;
   margin-top: 20px;
+  z-index: 1;
 }
 
 .event-date {
   font-weight: 700;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 1.5;
 }
 
 .event-hashtag {
@@ -309,10 +348,10 @@ body {
   display: inline-block;
   font-size: 18px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 1.5;
 }
 
-.event-item:nth-child(2)>.event-content {
+.event-item:nth-child(2) > .event-content {
   max-width: 259px;
 }
 
@@ -366,13 +405,13 @@ body {
   max-width: 356px;
   font-size: 40px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 1.25;
 }
 
 .schedule-date {
   font-size: 28px;
   font-weight: 700;
-  line-height: 35px;
+  line-height: 1.25;
 }
 
 .schedule-item {
@@ -388,14 +427,18 @@ body {
 
 .schedule-item:hover {
   border: 1px solid transparent;
-  background: linear-gradient(180deg, rgba(251, 241, 56, 0.7), rgba(253, 249, 182, 0.45) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(251, 241, 56, 0.7),
+    rgba(253, 249, 182, 0.45) 100%
+  );
   box-shadow: 0px 13px 30px 0px rgba(186, 180, 69, 0.2);
 }
 
 .schedule-name {
   font-size: 18px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 1.22;
 }
 
 .schedule-time {
@@ -403,7 +446,7 @@ body {
   text-align: end;
   font-size: 18px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 1.5;
 }
 
 .schedule-content {
@@ -416,26 +459,24 @@ body {
 
 .subscribe {
   background-color: rgba(243, 243, 243, 1);
+  display: flex;
   padding-top: 81px;
   padding-bottom: 82px;
   margin-bottom: 160px;
 }
 
-.subscribe>.container {
-  text-align: center;
-}
-
 .subscribe-form {
   display: flex;
-  margin-left: 269px;
   gap: 0 21px;
 }
 
 .subscribe-title {
   font-size: 40px;
   font-weight: 700;
-  line-height: 49px;
-  margin: 0;
+  line-height: 1.22;
+  max-width: 622px;
+  text-align: center;
+  margin: 0 auto;
   margin-bottom: 40px;
   position: relative;
   z-index: 1;
@@ -449,8 +490,8 @@ body {
   box-shadow: 0px 13px 24px 0px rgba(251, 241, 56, 0.3);
   border-radius: 24px;
   position: absolute;
-  left: 242px;
-  bottom: 14px;
+  left: -18px;
+  bottom: 15px;
   z-index: -1;
 }
 
@@ -460,7 +501,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 1);
   font-size: 18px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 1.5;
   padding: 18px;
   margin-bottom: 15px;
   color: rgba(43, 53, 65, 0.3);
@@ -471,7 +512,7 @@ body {
 }
 
 .subscribe-input:focus {
-  outline: 1px solid #FBF138;
+  outline: 1px solid #fbf138;
   color: rgba(43, 53, 65, 1);
 }
 
@@ -485,13 +526,13 @@ body {
 }
 
 .subscribe-btn {
-  background-color: #FBF138;
+  background-color: #fbf138;
   box-shadow: 0px 13px 24px 0px rgb(251 241 56 / 20%);
   padding: 19px 42px;
   color: rgba(43, 53, 65, 1);
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
@@ -503,7 +544,7 @@ body {
 .agreement {
   font-size: 11px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1.45;
   color: rgba(43, 53, 65, 0.5);
   text-align: left;
 }
@@ -514,30 +555,30 @@ body {
   left: -9999px;
 }
 
-.checkbox:checked+label,
-.checkbox:not(:checked)+label {
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
 
-.checkbox:checked+label::before {
-  content: '';
+.checkbox:checked + label::before {
+  content: "";
   position: absolute;
   width: 14px;
   height: 14px;
   left: 0;
   top: calc(50% - 10px);
-  background-color: #2B3541;
-  border: 2px solid #2B3541;
+  background-color: #2b3541;
+  border: 2px solid #2b3541;
 }
 
-.checkbox:checked+label::after {
-  content: '';
+.checkbox:checked + label::after {
+  content: "";
   position: absolute;
   width: 16px;
   height: 12px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   opacity: 1;
   left: 2px;
   top: calc(50% - 7px);
@@ -546,23 +587,23 @@ body {
   background-image: url(../images/icons/checkbox.svg);
 }
 
-.checkbox:not(:checked)+label::before {
-  content: '';
+.checkbox:not(:checked) + label::before {
+  content: "";
   position: absolute;
   width: 14px;
   height: 14px;
   left: 0;
   top: calc(50% - 10px);
   background-color: transparent;
-  border: 2px solid #2B3541;
+  border: 2px solid #2b3541;
 }
 
-.checkbox:not(:checked)+label::after {
-  content: '';
+.checkbox:not(:checked) + label::after {
+  content: "";
   position: absolute;
   width: 16px;
   height: 12px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   opacity: 0;
   left: 2px;
   top: calc(50% - 7px);
@@ -570,42 +611,58 @@ body {
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/icons/check_box_empty.svg)
+  background-image: url(../images/icons/check_box_empty.svg);
 }
 
-.radio:checked+label::before {
+.radio:checked + label::before {
   border-radius: 100%;
 }
 
-label>a {
+label > a {
   color: rgba(43, 53, 65, 0.5);
 }
 
-label>a:hover {
+label > a:hover {
   color: rgba(43, 53, 65, 1);
 }
 
 .about-company {
-  margin-bottom: 138px;
+  margin-bottom: 153px;
 }
 
 .about-company-content {
   display: flex;
   justify-content: space-between;
+  gap: 0 77px;
 }
 
 .about-company-img {
   background-image: url(../images/@1x/trainer.png);
+  background-image: -webkit-image-set(
+    url("../images/@2x/trainer@2x.png") 2x,
+    url("../images/@1x/trainer.png") 1x
+  );
+  background-image: image-set(
+    url("../images/@2x/trainer@2x.png") 2x,
+    url("../images/@1x/trainer.png") 1x
+  );
   width: 580px;
   height: 336px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .about-company-img::after {
   content: "";
-  background: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0.15) 100%);
-  width: 581px;
+  background: linear-gradient(
+    180deg,
+    rgba(251, 241, 56, 0.3) 0%,
+    rgba(253, 249, 182, 0.15) 100%
+  );
+  width: 580px;
   height: 336px;
   position: absolute;
 }
@@ -617,15 +674,14 @@ label>a:hover {
 .about-company-title {
   font-size: 40px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 1.25;
   margin: 0;
   margin-bottom: 21px;
 }
 
-.about-company-text,
-.advantages-items-text {
+.about-company-text {
   font-size: 18px;
-  line-height: 27px;
+  line-height: 1.5;
   padding-bottom: 15px;
 }
 
@@ -636,7 +692,7 @@ label>a:hover {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   box-sizing: border-box;
   border: 1px solid transparent;
@@ -647,8 +703,9 @@ label>a:hover {
   display: flex;
   list-style-type: none;
   padding-left: 0;
-  margin-top: 65px;
+  margin-top: 82px;
   justify-content: space-between;
+  gap: 0 9px;
 }
 
 .advantages-items:nth-child(1) {
@@ -670,7 +727,13 @@ label>a:hover {
 .advantages-items-title {
   font-size: 18px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 1.22;
+  margin: 0;
+}
+
+.advantages-items-text {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .banner-link:hover,
@@ -684,7 +747,7 @@ label>a:hover {
 .footer {
   background: rgba(243, 243, 243, 1);
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5;
 }
 
 .footer-navigation {
@@ -701,22 +764,26 @@ label>a:hover {
   margin-top: 10px;
 }
 
+.footer-box {
+  display: flex;
+  gap: 0 219px;
+}
+
 .footer-nav {
   list-style-type: none;
   display: flex;
   gap: 0 90px;
   padding-left: 0;
-  margin-right: 148px;
 }
 
-.footer-nav>li>a {
+.footer-nav > li > a {
   text-decoration: none;
   color: rgba(43, 53, 65, 1);
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.footer-nav>li>a:hover {
+.footer-nav > li > a:hover {
   color: rgba(24, 31, 39, 1);
 }
 
@@ -732,7 +799,7 @@ label>a:hover {
   margin-top: 13px;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
   color: rgba(43, 53, 65, 1);
   position: relative;
   z-index: 1;
@@ -759,7 +826,7 @@ label>a:hover {
   gap: 0 30px;
 }
 
-.footer-icons>li>a {
+.footer-icons > li > a {
   display: block;
   width: 27px;
   height: 27px;
@@ -769,7 +836,7 @@ label>a:hover {
   text-decoration: none;
 }
 
-.footer-icons>li>a:hover {
+.footer-icons > li > a:hover {
   transform: scale(1.2);
   opacity: 1;
 }
@@ -780,14 +847,13 @@ label>a:hover {
   color: rgba(43, 53, 65, 0.3);
 }
 
-.copyright-text>a {
+.copyright-text > a {
   color: rgba(43, 53, 65, 0.3);
 }
 
-.copyright-text>a:hover {
+.copyright-text > a:hover {
   color: rgba(43, 53, 65, 1);
 }
-
 
 /* Modal */
 .burger {
@@ -810,6 +876,7 @@ label>a:hover {
   padding: 30px 10px 0 10px;
   box-sizing: border-box;
   transition: 0.7s;
+  z-index: 2;
 }
 
 .modal .header-nav {
@@ -826,7 +893,7 @@ label>a:hover {
 .modal .header-nav li {
   border-bottom: 1px solid rgba(43, 53, 65, 0.2);
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   padding-bottom: 6px;
 }
 
@@ -839,12 +906,12 @@ label>a:hover {
   margin-bottom: 20px;
 }
 
-.modal .social-icons>li {
+.modal .social-icons > li {
   margin-left: 16px;
   margin-bottom: -10px;
 }
 
-.modal .social-icons>li>a {
+.modal .social-icons > li > a {
   width: 26px;
   height: 26px;
 }
@@ -863,24 +930,723 @@ label>a:hover {
   cursor: pointer;
 }
 
-/*Responsive*/
-
-@media (-webkit-min-device-pixel-ratio: 2) {
-  .selector {
-    background-image: url(../path_to_png/apple@2x.png);
-    background-size: cover;
-  }
+.hidden {
+  overflow: hidden;
 }
 
-@media (min-width: 766px) {
+.hidden::before {
+  content: "";
+  display: block;
+  background-color: rgba(43, 53, 65, 0.4);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+/*Responsive*/
+@media (min-width: 769px) {
   .header-burger {
     display: none;
   }
-
 }
 
-@media (max-width: 765px) {
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .banner-title {
+    padding-right: 50px;
+  }
+
+  .event-item {
+    width: 29vw;
+    height: 45vw;
+  }
+
+  .event-item::after {
+    width: 29vw;
+    height: 45vw;
+  }
+
+  .footer-box {
+    gap: 0 10vw;
+  }
+
+  .footer-nav {
+    gap: 0 7vw;
+  }
+
+  .footer-social {
+    gap: 0 5vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header-nav {
+    gap: 30px;
+    margin-right: 6vw;
+  }
+
+  .banner-title {
+    font-size: 40px;
+  }
+
+  .bg {
+    overflow: hidden;
+    margin-bottom: 160px;
+  }
+
+  .banner {
+    padding-top: 11px;
+    padding-bottom: 177px;
+    position: relative;
+  }
+
+  .visual {
+    width: 464px;
+    height: 605px;
+    right: 2px;
+  }
+
+  .visual-img {
+    width: 570px;
+    height: 510px;
+    right: 0;
+    bottom: -40px;
+  }
+
+  .event-name {
+    font-size: 2.5vw;
+  }
+
+  .event-date,
+  .event-hashtag {
+    font-size: 1.9vw;
+  }
+
+  .event-btn {
+    padding: 2vw 4vw;
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 950px) {
+  .visual-img {
+    width: 509px;
+    height: 485px;
+    bottom: -65px;
+  }
+
+  .advantages-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 60px;
+  }
+
+  .footer-box {
+    gap: 0 7vw;
+  }
+
+  .footer-nav {
+    gap: 0 7vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner-title > span {
+    font-size: 26px;
+  }
+
+  .banner-text {
+    font-size: 16px;
+    margin-bottom: 39px;
+    margin-top: 30px;
+  }
+
+  .banner-box {
+    margin-left: 0;
+  }
+
+  .button-down {
+    width: 39px;
+    height: 40px;
+  }
+
+  .about-company-content {
+    gap: 0 36px;
+  }
+
+  .about-company-img {
+    width: 373px;
+    height: 227px;
+  }
+
+  .about-company-img::after {
+    width: 373px;
+    height: 227px;
+  }
+
+  .advantages-list {
+    gap: 0 136px;
+  }
+
+  .footer-box {
+    flex-direction: column;
+    gap: 3vw 0;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 33px;
+  }
+}
+
+@media (max-width: 768px) {
   nav {
     display: none;
+  }
+
+  .bg {
+    margin-bottom: 104px;
+  }
+
+  .header-logo {
+    width: 78px;
+    height: 24px;
+  }
+
+  .header-item {
+    padding-top: 15px;
+    padding-bottom: 16px;
+  }
+
+  .header-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 57px;
+  }
+
+  .social-icons > li {
+    margin-left: 20px;
+  }
+
+  .social-icons > li > a {
+    width: 26px;
+    height: 26px;
+  }
+
+  .banner {
+    flex-basis: 400px;
+    padding-bottom: 83px;
+  }
+
+  .banner-title {
+    font-size: 26px;
+    padding-right: 4vw;
+  }
+
+  .visual {
+    width: 359px;
+    height: 429px;
+    right: 0;
+  }
+
+  .visual-img {
+    width: 51.95vw;
+    height: 42.7vw;
+    right: 0;
+    bottom: 0;
+  }
+
+  .event {
+    margin-bottom: 73px;
+  }
+
+  .event-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .event-item {
+    width: 364px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .event-item::after {
+    width: 47.4vw;
+  }
+
+  .event-item:nth-child(3)::after {
+    width: 97.5vw;
+  }
+
+  .event-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40.3vw 43.75vw;
+    gap: 11px 20px;
+    grid-template-areas:
+      "marafon trener"
+      "yoga yoga";
+  }
+
+  .event-item:nth-child(1) {
+    width: 47.4vw;
+    height: 40.3vw;
+    background-image: url(../images/@1x/maraphon-big.png);
+    background-image: -webkit-image-set(
+      url("../images/@2x/maraphon2x-big.png") 2x,
+      url("../images/@1x/maraphon-big.png") 1x
+    );
+    background-image: image-set(
+      url("../images/@2x/maraphon2x-big.png") 2x,
+      url("../images/@1x/maraphon-big.png") 1x
+    );
+    grid-area: marafon;
+  }
+
+  .event-item:nth-child(2) {
+    width: 47.4vw;
+    height: 40.3vw;
+    background-image: url(../images/@1x/vebinar1-big.png);
+    background-image: -webkit-image-set(
+      url("../images/@2x/vebinar1-2xbig.png") 2x,
+      url("../images/@1x/vebinar1-big.png") 1x
+    );
+    background-image: image-set(
+      url("../images/@2x/vebinar1-2xbig.png") 2x,
+      url("../images/@1x/vebinar1-big.png") 1x
+    );
+    background-position: left;
+    grid-area: trener;
+  }
+
+  .event-item:nth-child(3) {
+    width: 97.5vw;
+    height: 43.75vw;
+    background-image: url(../images/@1x/vebinar_2big.png);
+    background-image: -webkit-image-set(
+      url("../images/@2x/vebinar-2xbig.png") 2x,
+      url("../images/@1x/vebinar_2big.png") 1x
+    );
+    background-image: image-set(
+      url("../images/@2x/vebinar-2xbig.png") 2x,
+      url("../images/@1x/vebinar_2big.png") 1x
+    );
+    background-position: top;
+    grid-area: yoga;
+  }
+
+  .event-content {
+    padding-left: 27px;
+    padding-top: 17px;
+  }
+
+  .event-name {
+    font-size: 16px;
+    margin-top: 13px;
+    max-width: 144px;
+  }
+
+  .event-date {
+    font-size: 12px;
+  }
+
+  .event-hashtag {
+    font-size: 12px;
+    padding: 6px 16px;
+    right: inherit;
+  }
+
+  .event-add {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icons/add.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .event-btn {
+    left: 14vw;
+    top: 18vw;
+  }
+
+  .event-item:nth-child(3) .event-btn {
+    left: 38vw;
+    top: 18vw;
+  }
+
+  .schedule {
+    margin-bottom: 87px;
+  }
+
+  .schedule-heading {
+    margin-bottom: 17px;
+  }
+
+  .schedule-title {
+    max-width: 210px;
+    font-size: 26px;
+  }
+
+  .schedule-date {
+    font-size: 16px;
+  }
+
+  .schedule-grid {
+    grid-template-columns: repeat(2, 47.4vw);
+    grid-template-rows: repeat(3, 29.3vw);
+    gap: 20px;
+    grid-template-areas:
+      "training mix"
+      "sculpt practices"
+      "lab  warm-up";
+  }
+
+  .schedule-item {
+    padding: 22px 23px;
+  }
+
+  .schedule-content {
+    gap: 15px 0;
+  }
+
+  .schedule-name,
+  .schedule-time {
+    font-size: 16px;
+  }
+
+  .subscribe {
+    padding-top: 59px;
+    padding-bottom: 41px;
+    margin-bottom: 98px;
+  }
+
+  .subscribe-title {
+    font-size: 26px;
+    max-width: 214px;
+    margin-bottom: 51px;
+  }
+
+  .subscribe-title::before {
+    width: 31px;
+    height: 31px;
+    left: -5px;
+    bottom: 46px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 43px 0;
+  }
+
+  .subscribe-input {
+    width: 340px;
+  }
+
+  .subscribe-btn {
+    margin-bottom: 0;
+  }
+
+  .about-company {
+    margin-bottom: 77px;
+  }
+
+  .about-company-description {
+    flex-basis: 340px;
+  }
+
+  .about-company-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .advantages-list {
+    gap: 27px 11px;
+  }
+
+  .about-company-text,
+  .advantages-items-text,
+  .advantages-items-title {
+    font-size: 16px;
+  }
+
+  .footer-navigation {
+    padding-top: 50px;
+  }
+
+  .footer-nav,
+  .footer-email {
+    font-size: 12px;
+  }
+
+  .footer-nav {
+    gap: 0 3.5vw;
+  }
+
+  .footer-box {
+    margin-top: 0;
+    gap: 4.6vw 0;
+  }
+
+  .footer-social {
+    gap: 0 33px;
+  }
+
+  .footer-icons {
+    gap: 0 25px;
+  }
+
+  .footer-copyright {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .visual-img {
+    width: 57vw;
+    height: 47vw;
+  }
+
+  .schedule-item {
+    padding: 20px 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .bg > .container {
+    flex-direction: column;
+  }
+
+  .banner {
+    flex-basis: 100%;
+    padding-bottom: 24.4vw;
+  }
+
+  .banner-title {
+    padding-right: 0;
+  }
+
+  .banner-box {
+    max-width: 100%;
+  }
+
+  .banner-link {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .visual {
+    width: 94.4vw;
+    height: 60vw;
+    right: 0;
+  }
+
+  .visual-img {
+    width: 94.4vw;
+    height: 78vw;
+    right: 0;
+  }
+
+  .button-down {
+    display: none;
+  }
+
+  .bg {
+    margin-bottom: 35.55vw;
+  }
+
+  .event-cards {
+    grid-template-rows: 86.1vw 93.35vw;
+    gap: 11px 10px;
+  }
+
+  .event-item:nth-child(1) {
+    width: 45.8vw;
+    height: 86.1vw;
+    background-image: url(../images/@1x/maraphon-small.png);
+    background-image: -webkit-image-set(
+      url("../images/@2x/maraphon2x-small.png") 2x,
+      url("../images/@1x/maraphon-small.png") 1x
+    );
+    background-image: image-set(
+      url("../images/@2x/maraphon2x-small.png") 2x,
+      url("../images/@1x/maraphon-small.png") 1x
+    );
+  }
+
+  .event-item:nth-child(2) {
+    width: 45.8vw;
+    height: 86.1vw;
+    background-image: url(../images/@1x/vebinar1-small.png);
+    background-image: -webkit-image-set(
+      url("../images/@2x/vebinar1-2xsmall.png") 2x,
+      url("../images/@1x/vebinar1-small.png") 1x
+    );
+    background-image: image-set(
+      url("../images/@2x/vebinar1-2xsmall.png") 2x,
+      url("../images/@1x/vebinar1-small.png") 1x
+    );
+  }
+
+  .event-item:nth-child(3) {
+    width: 94.45vw;
+    height: 93.35vw;
+    background-image: url(../images/@1x/vebinar2-small.png);
+    background-image: -webkit-image-set(
+      url("../images/@2x/vebinar-2xsmall.png") 2x,
+      url("../images/@1x/vebinar2-small.png") 1x
+    );
+    background-image: image-set(
+      url("../images/@2x/vebinar-2xsmall.png") 2x,
+      url("../images/@1x/vebinar2-small.png") 1x
+    );
+  }
+
+  .event-btn,
+  .event-item:nth-child(3) .event-btn {
+    top: 40vw;
+  }
+
+  .event-item::after {
+    width: 45.8vw;
+  }
+
+  .event-item:nth-child(3)::after {
+    width: 94.45vw;
+  }
+
+  .event {
+    margin-bottom: 22.22vw;
+  }
+
+  .schedule-grid {
+    grid-template-columns: repeat(1, 94.4vw);
+    grid-template-rows: repeat(6, 114px);
+    grid-template-areas:
+      "training"
+      "mix"
+      "sculpt"
+      "practices"
+      "lab"
+      "warm-up";
+  }
+
+  .schedule-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+    bottom: 11px;
+  }
+
+  .about-company-description {
+    flex-basis: 100%;
+  }
+
+  .about-company-img {
+    display: none;
+  }
+
+  .about-company-btn {
+    width: 100%;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0px;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav {
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .footer-social {
+    justify-content: space-between;
+    gap: 0 43.3vw;
+  }
+
+  .footer-box {
+    margin-top: 41px;
+  }
+
+  .footer-copyright {
+    flex-direction: column;
+    text-align: ;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-box {
+    gap: 15.8vw;
+  }
+
+  .banner-title,
+  .banner-title > span,
+  .schedule-title,
+  .event-title,
+  .subscribe-title,
+  .about-company-title {
+    font-size: 7.22vw;
+  }
+
+  .banner-text,
+  .banner-link,
+  .event-name,
+  .schedule-name,
+  .schedule-time,
+  .subscribe-btn,
+  .about-company-btn,
+  .about-company-text,
+  .advantages-items-title,
+  .advantages-items-text {
+    font-size: 4.44vw;
+  }
+
+  .event-content {
+    padding-left: 7.5vw;
+  }
+
+  .subscribe-input {
+    max-width: 94.4vw;
+    font-size: 5vw;
+  }
+
+  .agreement {
+    font-size: 3.1vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 5vw;
+  }
+
+  .footer-social {
+    gap: 0 30vw;
   }
 }

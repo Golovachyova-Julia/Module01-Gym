@@ -2,15 +2,15 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Freefit</title>
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -23,14 +23,16 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body id="body">
   <header>
     <div class="container">
       <div class="header-item">
+        <div class="header-box">
         <a href="#" class="header-logo"></a>
         <div class="header-burger">
           <button class="burger" onclick="openModal()"></button>
         </div>
+      </div>
         <nav>
           <ul class="header-nav">
             <li><a href="#">Мероприятия</a></li>
@@ -58,7 +60,7 @@
       <div class="banner">
         <h1 class="banner-title">
           <span>&gt;&nbsp;15 тренировок</span>
-          онлайн тренировки любой&nbsp;сложности
+          онлайн&nbsp;тренировки любой&nbsp;сложности
         </h1>
         <div class="banner-box">
           <p class="banner-text">
@@ -70,7 +72,7 @@
       <div class="visual"></div>
       <div class="visual-img"></div>
       <a href="#eventBottom" class="button-down"></a>
-    </div>
+    </div>   
   </div>
   <main>
     <section class="event">
@@ -83,6 +85,7 @@
               <span class="event-date">29.06 - 4.07</span>
             </div>
             <span class="event-hashtag">марафон</span>
+            <span class="event-add"></span>
             <button type="button" class="event-btn">Записаться</button>
           </div>
           <div class="event-item">
@@ -91,6 +94,7 @@
               <span class="event-date">9.07</span>
             </div>
             <span class="event-hashtag">вебинар</span>
+            <span class="event-add"></span>
             <button type="button" class="event-btn">Записаться</button>
           </div>
           <div class="event-item">
@@ -99,6 +103,7 @@
               <span class="event-date">15.07</span>
             </div>
             <span class="event-hashtag">вебинар</span>
+            <span class="event-add"></span>
             <button type="button" class="event-btn">Записаться</button>
           </div>
         </div>
@@ -116,7 +121,14 @@
             <div class="schedule-content">
               <p class="schedule-name">Функциональный тренинг</p>
               <div class="schedule-img">
-                <img src="images/icons/body.svg" alt="training icon">
+                <img src="images/icons/body.svg"  
+                srcset="
+                images/icons/body.svg 65w,
+                images/icons/body.svg 39w"
+              sizes="
+                (min-width: 650px) 65px,
+                (min-width: 200px) 39px"
+                alt="training icon">
               </div>
             </div>
           </div>
@@ -125,7 +137,14 @@
             <div class="schedule-content">
               <p class="schedule-name">Body sculpt</p>
               <div class="schedule-img">
-                <img src="images/icons/bottle.svg" alt="body sculpt icon">
+                <img src="images/icons/bottle.svg"
+                srcset="
+                images/icons/bottle.svg 42w,
+                images/icons/bottle.svg 23w"
+              sizes="
+                (min-width: 650px) 42px,
+                (min-width: 200px) 23px" 
+                alt="body sculpt icon">
               </div>
             </div>
           </div>
@@ -134,7 +153,14 @@
             <div class="schedule-content">
               <p class="schedule-name">L.A.B.</p>
               <div class="schedule-img">
-                <img src="images/icons/dumbbell.svg" alt="lab dumbbell icon">
+                <img src="images/icons/dumbbell.svg"
+                srcset="
+                images/icons/dumbbell.svg 91w,
+                images/icons/dumbbell.svg 46w"
+              sizes="
+                (min-width: 650px) 91px,
+                (min-width: 200px) 46px" 
+                 alt="lab dumbbell icon">
               </div>
             </div>
           </div>
@@ -143,7 +169,14 @@
             <div class="schedule-content">
               <p class="schedule-name">Силовой микс</p>
               <div class="schedule-img">
-                <img src="images/icons/jump.svg" alt="power mix icon">
+                <img src="images/icons/jump.svg" 
+                srcset="
+                images/icons/jump.svg 66w,
+                images/icons/jump.svg 34w"
+              sizes="
+                (min-width: 650px) 66px,
+                (min-width: 200px) 34px" 
+                alt="power mix icon">
               </div>
             </div>
           </div>
@@ -152,7 +185,14 @@
             <div class="schedule-content">
               <p class="schedule-name">Дыхательные практики</p>
               <div class="schedule-img">
-                <img src="images/icons/heart.svg" alt="breathing practices icon">
+                <img src="images/icons/heart.svg" 
+                srcset="
+                images/icons/heart.svg 65w,
+                images/icons/heart.svg 39w"
+              sizes="
+                (min-width: 650px) 65px,
+                (min-width: 200px) 39px" 
+                alt="breathing practices icon">
               </div>
             </div>
           </div>
@@ -161,7 +201,14 @@
             <div class="schedule-content">
               <p class="schedule-name">Комплексная разминка</p>
               <div class="schedule-img">
-                <img src="images/icons/weight.svg" alt="complex warm-up icon">
+                <img src="images/icons/weight.svg"
+                srcset="
+                images/icons/weight.svg 58w,
+                images/icons/weight.svg 35w"
+              sizes="
+                (min-width: 650px) 58px,
+                (min-width: 200px) 35px" 
+                 alt="complex warm-up icon">
               </div>
             </div>
           </div>
@@ -200,7 +247,7 @@
           <ul class="advantages-list">
             <li class="advantages-items">
               <h3 class="advantages-items-title">Экономия времени </h3>
-              <p class="advantages-items-text">Не нужно тратить&nbsp;время на дорогу</p>
+              <p class="advantages-items-text">Не нужно тратить время на дорогу</p>
             </li>
             <li class="advantages-items">
               <h3 class="advantages-items-title">Индивидуальный подход</h3>
@@ -223,6 +270,7 @@
     <div class="container">
       <div class="footer-navigation">
         <a href="#" class="footer-logo"></a>
+        <div class="footer-box">
         <ul class="footer-nav">
           <li><a href="#">Мероприятия</a></li>
           <li><a href="#">Расписание</a></li>
@@ -241,6 +289,7 @@
             </li>
           </ul>
         </div>
+      </div>
       </div>
       <div class="footer-copyright">
         <p class="copyright-text">&copy; 2022, Все права защищены</p>
@@ -272,10 +321,12 @@
   <script>
     function openModal() {
       document.getElementById("modal").style.top = "0px";
+      document.getElementById("body").className = "hidden";
     }
 
     function closeModal() {
       document.getElementById("modal").style.top = "-400px";
+      document.getElementById("body").className = " ";
     }
   </script>
 </body>
