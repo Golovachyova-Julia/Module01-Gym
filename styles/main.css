@@ -94,9 +94,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.social-icons-hidden {
-  opacity: 0;
-}
 
 .bg > .container {
   display: flex;
