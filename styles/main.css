@@ -6,6 +6,8 @@ body {
 .container {
   max-width: 1141px;
   margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .header-logo {
@@ -51,6 +53,7 @@ body {
   margin-top: 11px;
   display: block;
   background: transparent;
+  transition: 0.3s;
 }
 
 .header-nav a:hover::after {
@@ -418,7 +421,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: 0.1s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -535,6 +538,7 @@ body {
   margin-bottom: 30px;
   box-sizing: border-box;
   border: 1px solid transparent;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -693,6 +697,7 @@ label > a:hover {
   letter-spacing: 0.03em;
   box-sizing: border-box;
   border: 1px solid transparent;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -846,6 +851,7 @@ label > a:hover {
 
 .copyright-text > a {
   color: rgba(43, 53, 65, 0.3);
+  transition: 0.3s;
 }
 
 .copyright-text > a:hover {
@@ -929,6 +935,7 @@ label > a:hover {
 
 .hidden {
   overflow: hidden;
+  padding-right: 17px;
 }
 
 .hidden::before {
@@ -953,9 +960,8 @@ label > a:hover {
 
 @media (max-width: 1200px) {
   .container {
-    padding: 0 10px;
+    overflow: hidden;
   }
-
   .banner-title {
     padding-right: 50px;
   }
@@ -1172,7 +1178,8 @@ label > a:hover {
   }
 
   .event-item {
-    width: 364px;
+    width: 47.39vw;
+    height: 40.2vw;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1197,8 +1204,6 @@ label > a:hover {
   }
 
   .event-item:nth-child(1) {
-    width: 47.4vw;
-    height: 40.3vw;
     background-image: url(../images/@1x/maraphon-big.png);
     background-image: -webkit-image-set(
       url("../images/@2x/maraphon2x-big.png") 2x,
@@ -1212,8 +1217,6 @@ label > a:hover {
   }
 
   .event-item:nth-child(2) {
-    width: 47.4vw;
-    height: 40.3vw;
     background-image: url(../images/@1x/vebinar1-big.png);
     background-image: -webkit-image-set(
       url("../images/@2x/vebinar1-2xbig.png") 2x,
@@ -1228,7 +1231,7 @@ label > a:hover {
   }
 
   .event-item:nth-child(3) {
-    width: 97.5vw;
+    width: 100%;
     height: 43.75vw;
     background-image: url(../images/@1x/vebinar_2big.png);
     background-image: -webkit-image-set(
@@ -1278,12 +1281,10 @@ label > a:hover {
   }
 
   .event-btn {
-    left: 14vw;
     top: 18vw;
   }
 
   .event-item:nth-child(3) .event-btn {
-    left: 38vw;
     top: 18vw;
   }
 
@@ -1305,7 +1306,7 @@ label > a:hover {
   }
 
   .schedule-grid {
-    grid-template-columns: repeat(2, 47.4vw);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 29.3vw);
     gap: 20px;
     grid-template-areas:
@@ -1470,13 +1471,16 @@ label > a:hover {
   }
 
   .event-cards {
-    grid-template-rows: 86.1vw 93.35vw;
+    grid-template-rows: 1fr 1.1fr;
     gap: 11px 10px;
   }
 
-  .event-item:nth-child(1) {
+  .event-item {
     width: 45.8vw;
     height: 86.1vw;
+  }
+
+  .event-item:nth-child(1) {
     background-image: url(../images/@1x/maraphon-small.png);
     background-image: -webkit-image-set(
       url("../images/@2x/maraphon2x-small.png") 2x,
@@ -1489,8 +1493,6 @@ label > a:hover {
   }
 
   .event-item:nth-child(2) {
-    width: 45.8vw;
-    height: 86.1vw;
     background-image: url(../images/@1x/vebinar1-small.png);
     background-image: -webkit-image-set(
       url("../images/@2x/vebinar1-2xsmall.png") 2x,
@@ -1503,7 +1505,7 @@ label > a:hover {
   }
 
   .event-item:nth-child(3) {
-    width: 94.45vw;
+    width: 100%;
     height: 93.35vw;
     background-image: url(../images/@1x/vebinar2-small.png);
     background-image: -webkit-image-set(
@@ -1516,11 +1518,7 @@ label > a:hover {
     );
   }
 
-  .event-btn,
-  .event-item:nth-child(3) .event-btn {
-    top: 40vw;
-  }
-
+  
   .event-item::after {
     width: 45.8vw;
   }
@@ -1529,12 +1527,20 @@ label > a:hover {
     width: 94.45vw;
   }
 
+  .event-btn,
+  .event-item:nth-child(3) .event-btn {
+    top: 40vw;
+    left: 5vw;
+    padding: 4vw 8vw;
+    font-size: 2.4vw;
+  }
+
   .event {
     margin-bottom: 22.22vw;
   }
 
   .schedule-grid {
-    grid-template-columns: repeat(1, 94.4vw);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 114px);
     grid-template-areas:
       "training"
@@ -1591,7 +1597,7 @@ label > a:hover {
 
   .footer-copyright {
     flex-direction: column;
-    text-align: ;
+    text-align: center;
   }
 }
 
@@ -1625,6 +1631,11 @@ label > a:hover {
   .event-content {
     padding-left: 7.5vw;
   }
+
+  .schedule-date {
+    text-align: right;
+}
+
 
   .subscribe-input {
     max-width: 94.4vw;
