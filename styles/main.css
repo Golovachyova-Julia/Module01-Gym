@@ -224,10 +224,11 @@ body {
 .event-cards {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .event-item {
-  width: 367px;
+  width: 32%;
   height: 600px;
   background-size: cover;
   background-position: center;
@@ -242,8 +243,8 @@ body {
     rgba(251, 241, 56, 0.3) 0%,
     rgba(253, 249, 182, 0) 70%
   );
-  width: 367px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   transition: 0.3s;
@@ -467,6 +468,7 @@ body {
 
 .subscribe-form {
   display: flex;
+  justify-content: center;
   gap: 0 21px;
 }
 
@@ -959,20 +961,11 @@ label > a:hover {
 }
 
 @media (max-width: 1200px) {
-  .container {
-    overflow: hidden;
-  }
   .banner-title {
     padding-right: 50px;
   }
 
   .event-item {
-    width: 29vw;
-    height: 45vw;
-  }
-
-  .event-item::after {
-    width: 29vw;
     height: 45vw;
   }
 
@@ -1178,19 +1171,11 @@ label > a:hover {
   }
 
   .event-item {
-    width: 47.39vw;
+    width: 100%;
     height: 40.2vw;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  .event-item::after {
-    width: 47.4vw;
-  }
-
-  .event-item:nth-child(3)::after {
-    width: 97.5vw;
   }
 
   .event-cards {
@@ -1476,7 +1461,6 @@ label > a:hover {
   }
 
   .event-item {
-    width: 45.8vw;
     height: 86.1vw;
   }
 
@@ -1505,7 +1489,6 @@ label > a:hover {
   }
 
   .event-item:nth-child(3) {
-    width: 100%;
     height: 93.35vw;
     background-image: url(../images/@1x/vebinar2-small.png);
     background-image: -webkit-image-set(
@@ -1516,15 +1499,6 @@ label > a:hover {
       url("../images/@2x/vebinar-2xsmall.png") 2x,
       url("../images/@1x/vebinar2-small.png") 1x
     );
-  }
-
-  
-  .event-item::after {
-    width: 45.8vw;
-  }
-
-  .event-item:nth-child(3)::after {
-    width: 94.45vw;
   }
 
   .event-btn,
