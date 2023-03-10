@@ -1610,7 +1610,6 @@ label > a:hover {
     text-align: right;
 }
 
-
   .subscribe-input {
     max-width: 94.4vw;
     font-size: 5vw;
@@ -1619,16 +1618,9 @@ label > a:hover {
   .agreement {
     font-size: 3.1vw;
   }
-}
-
-@media (max-width: 320px) {
-  .footer-nav {
-    flex-direction: column;
-    text-align: center;
-    gap: 5vw;
-  }
 
   .footer-social {
     gap: 0 30vw;
   }
 }
+
