@@ -793,6 +793,20 @@ label > a:hover {
   color: rgba(24, 31, 39, 1);
 }
 
+.footer-nav > li > a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  margin-top: 11px;
+  display: block;
+  background: transparent;
+  transition: .3s;
+}
+
+.footer-nav > li > a:hover::after {
+  background: #2b3541;
+}
+
 .footer-social {
   display: flex;
   justify-content: space-between;
