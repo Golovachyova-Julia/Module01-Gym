@@ -40,6 +40,7 @@ body {
   font-size: 18px;
   color: rgba(43, 53, 65, 1);
   text-decoration: none;
+  transition: .3s;
 }
 
 .header-nav a:hover {
@@ -53,7 +54,7 @@ body {
   margin-top: 11px;
   display: block;
   background: transparent;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .header-nav a:hover::after {
@@ -785,6 +786,7 @@ label > a:hover {
   color: rgba(43, 53, 65, 1);
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: .3s;
 }
 
 .footer-nav > li > a:hover {
@@ -853,7 +855,7 @@ label > a:hover {
 
 .copyright-text > a {
   color: rgba(43, 53, 65, 0.3);
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .copyright-text > a:hover {
